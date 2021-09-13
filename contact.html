@@ -1,0 +1,148 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MUSIK</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    .form-group {
+
+      width: 800px;
+      margin: 20px 0px 20px 500px;
+      color: 256, 256, 256;
+      padding: 0px 10px;
+      border-radius: 15px;
+
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+
+<body>
+  <i class='bx bx-chevron-up scrolltop__icon'></i>
+  </a>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="contact.html">Register</a></li>
+    <li><a href="about.html">Log In</a></li>
+     <li><a href="musicplayer.php">Music Player</a></li>
+  </ul>
+  <div class="contact section bd-container" id="contact">
+    <div class="contact__container bd-grid">
+      <div class="contact__data">
+
+        <h3 class="contact__description"> Hey, Music lovers register with us to enjoy unenturupted and totally
+        free music from a huge range of collections</h3>
+        
+
+      </div>
+      <div class="container mt-4">
+
+       
+        <form action="" method="post" onsubmit="return(validate());" id="form" name="form">
+          <div class="form-row">
+
+
+            <div class="form-group">
+              <h2 class="section-title">Register With US</h2>
+              <label for="inputEmail4"><br> Username </br></label>
+              <input type="text" class="form-control" name="username" id="inputEmail4" placeholder="Email">
+
+
+              <label for="inputPassword4"><br> Password </br></label>
+              <input type="password" class="form-control" name="password" id="inputPassword4" placeholder="Password">
+
+
+              <label for="inputPassword4"><br>Confirm Password</br></label>
+              <input type="password" class="form-control" name="confirm_password" id="inputPassword" placeholder="Confirm Password">
+
+
+              <label for="inputAddress2"><br>Address</br></label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+
+
+
+              <label for="inputCity"><br>City</br></label>
+              <input type="text" class="form-control" id="inputCity">
+
+
+              <label for="inputState"><br>State</br></label>
+              <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
+
+              <label for="inputZip"><br>Zip</br></label>
+              <input type="text" class="form-control" id="inputZip">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+
+
+  <script>
+    function validate() {
+      var city=document.getElementById("inputCity").value;
+      var zip=document.getElementById("inputZip").value;
+      var add=document.getElementById("inputAddress2").value;
+      var name = document.getElementById("inputEmail4").value;
+      var password = document.getElementById("inputPassword4").value;
+      var password2=document.getElementById("inputPassword").value;
+      if (name == null || name == "") {
+        alert("User name can't be blank");
+        return false;
+      } else if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+      else if(password!=password2)
+      {
+        alert("please review your password");
+        return false;
+      }
+      else if(add==null || add=="")
+      {
+        alert("Address must be required to be field");
+        return false;
+      }
+      else if(city==null || city=="")
+      {
+        alert("city must be required to be field");
+        return false;
+      }
+      else if(zip.length!=6)
+      {
+        alert("zip code must be of 6 digit.");
+        return false;
+      }
+
+    }
+  </script>
+
+</body>
+
+</html>
